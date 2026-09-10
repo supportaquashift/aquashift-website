@@ -1,0 +1,60 @@
+/* ==========================================================================
+   AQUASHIFT — Animations
+   ========================================================================== */
+
+/* ---- Scroll reveal ----
+   Hidden-until-visible only applies when JS has confirmed it can reveal
+   elements (html.js, set by an inline head script). Without JS, content
+   stays visible by default so nothing is permanently hidden. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger direct children when parent carries .reveal-group */
+.reveal-group.is-visible > * {
+  animation: none;
+}
+
+/* ---- Cinematic hero: blur-fade-up entrance (fires on load, not on scroll) ---- */
+@keyframes blurFadeUp {
+  from { opacity: 0; filter: blur(20px); transform: translateY(40px); }
+  to { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+.animate-blur-fade-up {
+  opacity: 0;
+  animation: blurFadeUp 1s var(--ease-out) forwards;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-float.is-shown { animation: pulse-ring 2.6s ease-out infinite; }
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-blur-fade-up {
+    opacity: 1;
+    animation: none;
+    filter: none;
+    transform: none;
+  }
+  .whatsapp-float {
+    animation: none !important;
+  }
+  .btn::before { transition: none; }
+}
