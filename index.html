@@ -30,6 +30,8 @@
   <link rel="apple-touch-icon" href="assets/favicon.svg?v=2">
 
   <!-- Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -72,7 +74,10 @@
   <header class="header" id="header">
     <div class="container header__row">
       <a href="#home" class="header__logo" aria-label="AQUASHIFT home">
-        <img src="assets/aqua-nobgm-cropped.png" alt="AQUASHIFT — Doorstep Car Care" width="83" height="54">
+        <picture>
+          <source srcset="assets/aqua-nobgm-cropped.webp" type="image/webp">
+          <img src="assets/aqua-nobgm-cropped.png" alt="AQUASHIFT — Doorstep Car Care" width="83" height="54" decoding="async">
+        </picture>
       </a>
 
       <nav class="nav" id="nav" aria-label="Primary">
@@ -335,27 +340,36 @@
             <figcaption>Exterior Wash</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img
-              class="gallery-card__photo"
-              src="assets/images/gallery-interior-detailing.jpg"
-              alt="Aquashift technician cleaning the interior of a luxury car during a doorstep detailing service"
-              width="1024" height="1024" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="assets/images/gallery-interior-detailing.webp" type="image/webp">
+              <img
+                class="gallery-card__photo"
+                src="assets/images/gallery-interior-detailing.jpg"
+                alt="Aquashift technician cleaning the interior of a luxury car during a doorstep detailing service"
+                width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Interior Detailing</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img
-              class="gallery-card__photo"
-              src="assets/images/gallery-wax-polish.jpg"
-              alt="Glossy reflective finish on a car's bodywork after an Aquashift wax and polish service"
-              width="1024" height="1024" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="assets/images/gallery-wax-polish.webp" type="image/webp">
+              <img
+                class="gallery-card__photo"
+                src="assets/images/gallery-wax-polish.jpg"
+                alt="Glossy reflective finish on a car's bodywork after an Aquashift wax and polish service"
+                width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Wax &amp; Polish Shine</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img
-              class="gallery-card__photo"
-              src="assets/images/gallery-foam-wash.jpg"
-              alt="Thick foam covering a car's bonnet and hood during an Aquashift doorstep deep wash"
-              width="1024" height="1024" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="assets/images/gallery-foam-wash.webp" type="image/webp">
+              <img
+                class="gallery-card__photo"
+                src="assets/images/gallery-foam-wash.jpg"
+                alt="Thick foam covering a car's bonnet and hood during an Aquashift doorstep deep wash"
+                width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Foam Deep Wash</figcaption>
           </figure>
         </div>

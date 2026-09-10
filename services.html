@@ -29,6 +29,8 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=2">
   <link rel="apple-touch-icon" href="assets/favicon.svg?v=2">
 
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -43,7 +45,10 @@
   <header class="header header--solid" id="header">
     <div class="container header__row">
       <a href="index.html" class="header__logo" aria-label="AQUASHIFT home">
-        <img src="assets/aqua-nobgm-cropped.png" alt="AQUASHIFT — Doorstep Car Care" width="83" height="54">
+        <picture>
+          <source srcset="assets/aqua-nobgm-cropped.webp" type="image/webp">
+          <img src="assets/aqua-nobgm-cropped.png" alt="AQUASHIFT — Doorstep Car Care" width="83" height="54" decoding="async">
+        </picture>
       </a>
       <nav class="nav" aria-label="Primary">
         <ul class="nav__list">
@@ -90,8 +95,10 @@
     <!-- ============ PAGE HERO ============ -->
     <section class="services-hero">
       <picture>
+        <source media="(max-width: 640px)" srcset="assets/images/services-hero-mobile.webp" type="image/webp">
         <source media="(max-width: 640px)" srcset="assets/images/services-hero-mobile.jpg">
-        <img class="services-hero__img" src="assets/images/services-hero.jpg" alt="Two Aquashift technicians foam-washing a blue SUV at a doorstep car wash" width="1672" height="940">
+        <source srcset="assets/images/services-hero.webp" type="image/webp">
+        <img class="services-hero__img" src="assets/images/services-hero.jpg" alt="Two Aquashift technicians foam-washing a blue SUV at a doorstep car wash" width="1672" height="940" decoding="async">
       </picture>
       <div class="services-hero__tint" aria-hidden="true"></div>
       <div class="services-hero__blur" aria-hidden="true"></div>
