@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "headers": [
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "source": "/css/(.*)",
+      "source": "/css/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "source": "/js/(.*)",
+      "source": "/js/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         {
           "key": "X-Content-Type-Options",

@@ -1,4 +1,89 @@
 /* ==========================================================================
+   AQUASHIFT — Design Tokens
+   Source: CLAUDE.md §3 (colors), §4 (type)
+   ========================================================================== */
+
+:root {
+  /* ---- Brand colors ---- */
+  --aq-blue: #054aab;       /* Primary / Brand Blue */
+  --aq-blue-rgb: 5, 74, 171;
+  --aq-navy: #01142f;       /* Deep Navy */
+  --aq-navy-rgb: 1, 20, 47;
+  --aq-ink: #01040b;        /* Rich Black — body text */
+  --aq-ocean: #014498;      /* Secondary Blue */
+  --aq-sky: #5c89c8;        /* Mid Accent */
+  --aq-pale: #e8f0fb;       /* Light Tint */
+  --aq-slate: #59667a;      /* Neutral Grey */
+  --aq-white: #ffffff;
+
+  --aq-gradient: linear-gradient(135deg, #054aab 0%, #01142f 100%);
+  --aq-gradient-soft: linear-gradient(160deg, #0a5cc9 0%, #054aab 45%, #01142f 100%);
+
+  /* ---- Surfaces ---- */
+  --surface-0: var(--aq-white);
+  --surface-1: var(--aq-pale);
+  --surface-dark: var(--aq-navy);
+
+  /* ---- Typography ---- */
+  --font-display: "Sora", "Outfit", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+
+  --fs-h1: clamp(2.25rem, 1.5rem + 3vw, 3.4rem);      /* 36px -> 54.4px */
+  --fs-h2: clamp(1.9rem, 1.4rem + 2.2vw, 2.6rem);      /* ~30px -> 42px */
+  --fs-h3: clamp(1.35rem, 1.15rem + 0.9vw, 1.7rem);
+  --fs-lead: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-eyebrow: 0.8rem;
+
+  --lh-body: 1.65;
+  --lh-tight: 1.15;
+  --ls-eyebrow: 0.14em;
+
+  /* ---- Spacing scale ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  --section-pad: clamp(3.5rem, 3rem + 2.5vw, 6.5rem);
+  --container-w: 1220px;
+  --container-pad: clamp(1.25rem, 0.9rem + 1.5vw, 2.5rem);
+
+  /* ---- Radius & shadow ---- */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(1, 20, 47, 0.06);
+  --shadow-md: 0 12px 32px rgba(1, 20, 47, 0.12);
+  --shadow-lg: 0 24px 64px rgba(1, 20, 47, 0.22);
+  --shadow-glow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 20px 50px rgba(1, 8, 24, 0.45);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.2s;
+  --dur-med: 0.45s;
+  --dur-slow: 0.9s;
+
+  --header-h: 84px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --header-h: 68px;
+  }
+}
+
+
+/* ==========================================================================
    AQUASHIFT — Core Styles
    ========================================================================== */
 
@@ -1266,3 +1351,65 @@ a.liquid-glass:hover, button.liquid-glass:hover { color: #fff; }
   font-weight: 600;
 }
 .legal__back { display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: var(--space-lg); color: var(--aq-blue); font-weight: 600; }
+
+
+/* ==========================================================================
+   AQUASHIFT — Animations
+   ========================================================================== */
+
+/* ---- Scroll reveal ----
+   Hidden-until-visible only applies when JS has confirmed it can reveal
+   elements (html.js, set by an inline head script). Without JS, content
+   stays visible by default so nothing is permanently hidden. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger direct children when parent carries .reveal-group */
+.reveal-group.is-visible > * {
+  animation: none;
+}
+
+/* ---- Cinematic hero: blur-fade-up entrance (fires on load, not on scroll) ---- */
+@keyframes blurFadeUp {
+  from { opacity: 0; filter: blur(20px); transform: translateY(40px); }
+  to { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+.animate-blur-fade-up {
+  opacity: 0;
+  animation: blurFadeUp 1s var(--ease-out) forwards;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-float.is-shown { animation: pulse-ring 2.6s ease-out infinite; }
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-blur-fade-up {
+    opacity: 1;
+    animation: none;
+    filter: none;
+    transform: none;
+  }
+  .whatsapp-float {
+    animation: none !important;
+  }
+  .btn::before { transition: none; }
+}
