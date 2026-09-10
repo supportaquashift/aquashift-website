@@ -1,5 +1,11 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/google21705705fe80cda3.html",
+      "destination": "/google21705705fe80cda3.html"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/:path*",
