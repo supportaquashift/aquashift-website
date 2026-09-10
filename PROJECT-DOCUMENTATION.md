@@ -184,7 +184,7 @@ Then visit `http://localhost:8080/`. No install step, no dependencies to fetch �
 
 ## 10. Deployment
 
-Because this is 100% static files with zero server-side logic, it can be deployed to **any** static host with no configuration beyond "point it at this folder": Netlify, Vercel, GitHub Pages, Cloudflare Pages, or traditional shared hosting (cPanel, etc.) via FTP. There is no build command to run — deploy the repository as-is. Just make sure the host serves `index.html` at the root and preserves the `assets/`, `css/`, `js/` folder structure exactly as-is (relative paths are used throughout, no absolute `/` paths, except within `sitemap.xml`/`robots.txt`/JSON-LD/OG tags which correctly hardcode `https://www.theaquashift.in/...`).
+Because this is 100% static files with zero server-side logic, it can be deployed to **any** static host with no configuration beyond "point it at this folder": Netlify, Vercel, GitHub Pages, Cloudflare Pages, or traditional shared hosting (cPanel, etc.) via FTP. There is no build command to run — deploy the repository as-is. Just make sure the host serves `index.html` at the root and preserves the `assets/`, `css/`, `js/` folder structure exactly as-is (relative paths are used throughout, no absolute `/` paths, except within `sitemap.xml`/`robots.txt`/JSON-LD/OG tags which correctly hardcode `https://theaquashift.com/...`).
 
 ---
 

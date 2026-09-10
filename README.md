@@ -2,7 +2,7 @@
 
   # 💧 AQUASHIFT — Premium Doorstep Car Care
 
-  **Official Web Repository for [theaquashift.in](https://www.theaquashift.in/)**  
+  **Official Web Repository for [theaquashift.com](https://theaquashift.com/)**  
   *Operated by WHS Auto Solution Private Limited — Calicut (Kozhikode), Kerala, India*
 
   [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -13,7 +13,7 @@
 
   <br />
 
-  <a href="https://www.theaquashift.in/"><strong>Explore the Live Website »</strong></a>
+  <a href="https://theaquashift.com/"><strong>Explore the Live Website »</strong></a>
 
   <br />
   <br />
@@ -169,7 +169,7 @@ This repository is 100% static and requires **no build step**. Deploy directly t
 - **WhatsApp:** [Book Service on WhatsApp](https://wa.me/919995566866)
 - **Instagram:** [@aquashift_care](https://instagram.com/aquashift_care)
 - **Service Location:** Calicut (Kozhikode), Kerala, India
-- **Official Domain:** [theaquashift.in](https://www.theaquashift.in)
+- **Official Domain:** [theaquashift.com](https://theaquashift.com)
 
 ---
 

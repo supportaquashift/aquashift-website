@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.theaquashift.in/sitemap.xml
+Sitemap: https://theaquashift.com/sitemap.xml

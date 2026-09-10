@@ -12,7 +12,7 @@ Build a modern, premium, mobile-first marketing website for **AQUASHIFT**, a doo
 - **Brand name:** AQUASHIFT
 - **Service:** Doorstep (at-home / at-office) car wash and car care services
 - **Location / service area:** Calicut (Kozhikode), Kerala, India
-- **Domain:** theaquashift.in
+- **Domain:** theaquashift.com
 - **Positioning:** Convenient, trustworthy, high-quality car care that comes to the customer — no need to drive to a garage or wait in line. Premium but approachable, tech-enabled, water-and-shine themed.
 
 The site should feel **clean, trustworthy, fast, and premium** — think "Apple-level polish meets a local water/auto-care brand." Avoid generic stock-template look. Use lots of whitespace, confident typography, subtle motion, and real service-oriented content (not lorem ipsum).
@@ -77,7 +77,7 @@ Use this exact information throughout the site (header, footer, contact page, sc
 - **WhatsApp booking:** +91 99955 66866 → `https://wa.me/919995566866` (use as primary CTA link; update if a separate WhatsApp business number is provided later)
 - **Instagram:** link to AQUASHIFT's official Instagram profile (placeholder: `https://instagram.com/aquashift` — replace with real handle before launch)
 - **Service area:** Calicut / Kozhikode, Kerala, India
-- **Domain:** theaquashift.in
+- **Domain:** theaquashift.com
 
 > **Note to Claude building the site:** Instagram URL and final WhatsApp number are placeholders — insert real links once provided; do not fabricate follower counts, reviews, or testimonials.
 
@@ -172,5 +172,5 @@ Phone: +91 99955 66866
 Email: supportaquashift.in@gmail.com
 WhatsApp: https://wa.me/919995566866
 Location: Calicut / Kozhikode, Kerala
-Domain: theaquashift.in
+Domain: theaquashift.com
 ```
