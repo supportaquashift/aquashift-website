@@ -44,162 +44,180 @@
   <meta name="geo.position" content="11.2588;75.7804">
   <meta name="ICBM" content="11.2588, 75.7804">
 
-  <!-- LocalBusiness, AutoWash & FAQPage structured data -->
+  <!-- LocalBusiness & AutoWash structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": ["AutoWash", "LocalBusiness"],
+    "@id": "https://www.theaquashift.in/#organization",
+    "name": "AQUASHIFT",
+    "legalName": "WHS Auto Solution Private Limited",
+    "image": [
+      "https://www.theaquashift.in/assets/aqua-nobgm-cropped.png",
+      "https://www.theaquashift.in/assets/logo.svg"
+    ],
+    "logo": "https://www.theaquashift.in/assets/logo.svg",
+    "url": "https://www.theaquashift.in/",
+    "telephone": "+919995566866",
+    "email": "supportaquashift.in@gmail.com",
+    "priceRange": "₹299 - ₹4299",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, UPI",
+    "hasMap": "https://maps.google.com/maps?q=Kozhikode%2C%20Kerala",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calicut",
+      "addressLocality": "Kozhikode",
+      "addressRegion": "Kerala",
+      "postalCode": "673001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 11.2588,
+      "longitude": 75.7804
+    },
+    "areaServed": [
       {
-        "@type": ["AutoWash", "LocalBusiness"],
-        "@id": "https://www.theaquashift.in/#organization",
-        "name": "AQUASHIFT",
-        "legalName": "WHS Auto Solution Private Limited",
-        "image": "https://www.theaquashift.in/assets/logo.svg?v=2",
-        "url": "https://www.theaquashift.in/",
-        "telephone": "+919995566866",
-        "email": "supportaquashift.in@gmail.com",
-        "priceRange": "₹299 - ₹4299",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Kozhikode",
-          "addressRegion": "Kerala",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "11.2588",
-          "longitude": "75.7804"
-        },
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "Kozhikode (Calicut)"
+        "@type": "City",
+        "name": "Kozhikode (Calicut)"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Kerala"
+      }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+          "https://schema.org/Sunday"
+        ],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    ],
+    "sameAs": ["https://instagram.com/aquashift_care"],
+    "description": "Doorstep car wash and car care service in Calicut, Kozhikode. Exterior wash, interior cleaning, foam wash, wax and polish, and membership plans.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Car Wash & Detailing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Aqua Rapid Wash",
+            "description": "Quick clean and fresh shine including exterior foam/dry wash, hand towel dry, tyre dressing, and glass cleaning."
           },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Kerala"
-          }
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "07:00",
-            "closes": "19:00"
-          }
-        ],
-        "sameAs": ["https://instagram.com/aquashift_care"],
-        "description": "Doorstep car wash and car care service in Calicut, Kozhikode. Exterior wash, interior cleaning, foam wash, wax and polish, and membership plans.",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Car Wash & Detailing Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Aqua Rapid Wash",
-                "description": "Quick clean and fresh shine including exterior foam/dry wash, hand towel dry, tyre dressing, and glass cleaning."
-              },
-              "price": "299.00",
-              "priceCurrency": "INR"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Aqua Essential Wash",
-                "description": "Complete care including interior/trunk vacuum, floor mat shampoo, underbody wash, exterior foam wash, and tyre polish."
-              },
-              "price": "499.00",
-              "priceCurrency": "INR"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Aqua Premium Wash",
-                "description": "Complete care & premium shine including door pad polish, interior steaming, air freshener, and paper mats."
-              },
-              "price": "899.00",
-              "priceCurrency": "INR"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Aqua Diamond Wash",
-                "description": "Ultimate detail including A/C vent steaming, upholstery cleaning, and ceramic hand waxing."
-              },
-              "price": "1499.00",
-              "priceCurrency": "INR"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Aqua Signature Wash",
-                "description": "Pinnacle of car care including engine steam cleaning, roof cleaning, and premium ceramic wax coat."
-              },
-              "price": "3799.00",
-              "priceCurrency": "INR"
-            }
-          ]
+          "price": "299.00",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Aqua Essential Wash",
+            "description": "Complete care including interior/trunk vacuum, floor mat shampoo, underbody wash, exterior foam wash, and tyre polish."
+          },
+          "price": "499.00",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Aqua Premium Wash",
+            "description": "Complete care & premium shine including door pad polish, interior steaming, air freshener, and paper mats."
+          },
+          "price": "899.00",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Aqua Diamond Wash",
+            "description": "Ultimate detail including A/C vent steaming, upholstery cleaning, and ceramic hand waxing."
+          },
+          "price": "1499.00",
+          "priceCurrency": "INR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Aqua Signature Wash",
+            "description": "Pinnacle of car care including engine steam cleaning, roof cleaning, and premium ceramic wax coat."
+          },
+          "price": "3799.00",
+          "priceCurrency": "INR"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQPage structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.theaquashift.in/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I book a doorstep car wash in Calicut?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Message us on WhatsApp or call +91 99955 66866 with your car model, location, and convenient time. We will confirm your slot within minutes."
         }
       },
       {
-        "@type": "FAQPage",
-        "@id": "https://www.theaquashift.in/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How do I book a doorstep car wash in Calicut?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Message us on WhatsApp or call +91 99955 66866 with your car model, location, and convenient time. We will confirm your slot within minutes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which areas in Calicut (Kozhikode) do you cover?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We currently serve Calicut city and surrounding residential and office areas. Message us with your location to confirm doorstep coverage."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where does the water come from for the car wash?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Our technicians bring their own water and specialized equipment, so there is no burden on your household supply."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What payment methods do you accept?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cash and UPI payments are accepted after the doorstep car care service is completed."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I cancel or reschedule my booking?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, message us on WhatsApp as early as possible and we will reschedule your slot. See our Refund & Cancellation Policy for details."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are my car and keys safe during doorstep service?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Our staff are thoroughly trained and verified before assignment, and washes are performed at your doorstep in your presence whenever possible."
-            }
-          }
-        ]
+        "@type": "Question",
+        "name": "Which areas in Calicut (Kozhikode) do you cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We currently serve Calicut city and surrounding residential and office areas. Message us with your location to confirm doorstep coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does the water come from for the car wash?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our technicians bring their own water and specialized equipment, so there is no burden on your household supply."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cash and UPI payments are accepted after the doorstep car care service is completed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I cancel or reschedule my booking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, message us on WhatsApp as early as possible and we will reschedule your slot. See our Refund & Cancellation Policy for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my car and keys safe during doorstep service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our staff are thoroughly trained and verified before assignment, and washes are performed at your doorstep in your presence whenever possible."
+        }
       }
     ]
   }
