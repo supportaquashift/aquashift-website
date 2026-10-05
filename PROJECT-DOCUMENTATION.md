@@ -192,7 +192,7 @@ Because this is 100% static files with zero server-side logic, it can be deploye
 
 These are intentional, clearly-marked incomplete items — not bugs:
 
-- **FAQ answers**: two answers (water source, payment methods) contain `<em>[CONFIRM WITH OWNER: ...]</em>` placeholder text per `CLAUDE.md`'s instruction not to invent specific business policy details. Replace with real answers once confirmed with the business owner.
+- **FAQ answers**: two answers (water source, payment methods) contain `<em>[CONFIRM WITH TECHNICIAN: ...]</em>` placeholder text per `CLAUDE.md`'s instruction not to invent specific business policy details. Replace with real answers once confirmed with the business owner.
 - **Contact form**: intentionally WhatsApp-only, no backend/email (see §5). If real lead-capture into a database or CRM is ever needed, that's the one place to extend.
 - **`assets/illustrations/`**: empty folder, currently unused.
 - **Testimonials section**: not present on the site at all — `CLAUDE.md` explicitly says to omit it rather than invent fake reviews until real ones are supplied.
